@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "790b01fc-536f-4c86-ac44-fb30654378a2": {
+      "ProjectGuid": "790b01fc-536f-4c86-ac44-fb30654378a2",
+      "DisplayName": "UdemyNLayerProject.API",
+      "ColorIndex": 0
+    },
+    "a53fb7ec-3901-4737-a7be-70e244d72657": {
+      "ProjectGuid": "a53fb7ec-3901-4737-a7be-70e244d72657",
+      "DisplayName": "UdemyNLayerProject.Core",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
