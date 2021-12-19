@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "UdemyNLayerProject.Core/1.0.0": {
+        "runtime": {
+          "UdemyNLayerProject.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UdemyNLayerProject.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

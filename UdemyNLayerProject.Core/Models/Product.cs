@@ -1,6 +1,6 @@
 ﻿namespace UdemyNLayerProject.Core.Models
 {
-    class Product
+    public class Product
     {
         public int Id { get; set; }
 
@@ -16,7 +16,7 @@
 
         public bool IsDeleted { get; set; }
 
-        public string InnerBarcode { get; set; }
+        public string? InnerBarcode { get; set; }
 
         public virtual Category Category { get; set; }
     }
