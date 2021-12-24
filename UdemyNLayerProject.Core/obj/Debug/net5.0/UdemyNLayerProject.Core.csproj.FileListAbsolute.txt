@@ -1,0 +1,12 @@
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\bin\Debug\net5.0\UdemyNLayerProject.Core.deps.json
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\bin\Debug\net5.0\UdemyNLayerProject.Core.dll
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\bin\Debug\net5.0\ref\UdemyNLayerProject.Core.dll
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\bin\Debug\net5.0\UdemyNLayerProject.Core.pdb
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.csproj.AssemblyReference.cache
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.AssemblyInfoInputs.cache
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.AssemblyInfo.cs
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.dll
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\ref\UdemyNLayerProject.Core.dll
+C:\Users\Hakan\RiderProjects\UdemyNLayerProject\UdemyNLayerProject.Core\obj\Debug\net5.0\UdemyNLayerProject.Core.pdb

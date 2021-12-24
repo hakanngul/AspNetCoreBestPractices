@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using UdemyNLayerProject.Core.IUnitOfWorks;
+using UdemyNLayerProject.Core.UnitOfWorks;
 using UdemyNLayerProject.Core.Repositories;
 using UdemyNLayerProject.Data.Repositories;
 
@@ -10,26 +10,25 @@ namespace UdemyNLayerProject.Data.UnitOfWorks
         private readonly AppDbContext _context;
 
         private ProductRepository _productRepository;
+        private CategoryRepository _CategoryRepository;
 
-        private CategoryRepository _categoryRepository;
+        public IProductRepository Products => _productRepository = _productRepository ?? new ProductRepository(_context);
 
-        public IProductRepository Products => _productRepository ??= new ProductRepository(_context);
-
-        public ICategoryRepository Categories => _categoryRepository ??= new CategoryRepository(_context);
+        public ICategoryRepository Categories => _CategoryRepository = _CategoryRepository ?? new CategoryRepository(_context);
 
         public UnitOfWork(AppDbContext appDbContext)
         {
             _context = appDbContext;
         }
 
-        public async Task CommitAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
-
         public void Commit()
         {
             _context.SaveChanges();
+        }
+
+        public async Task CommitAsync()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

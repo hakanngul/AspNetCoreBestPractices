@@ -6,12 +6,9 @@ using UdemyNLayerProject.Core.Repositories;
 
 namespace UdemyNLayerProject.Data.Repositories
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    internal class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        private AppDbContext _appContext
-        {
-            get => _context as AppDbContext;
-        }
+        private AppDbContext _appDbContext { get => _context as AppDbContext; }
 
         public CategoryRepository(AppDbContext context) : base(context)
         {
@@ -19,10 +16,7 @@ namespace UdemyNLayerProject.Data.Repositories
 
         public async Task<Category> GetWithProductsByIdAsync(int categoryId)
         {
-            return await
-                _appContext.Categories
-                    .Include(x => x.Products)
-                    .SingleOrDefaultAsync(x => x.Id == categoryId);
+            return await _appDbContext.Category.Include(x => x.Products).SingleOrDefaultAsync(x => x.Id == categoryId);
         }
     }
 }

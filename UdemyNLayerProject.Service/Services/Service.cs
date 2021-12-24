@@ -1,29 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
 using System.Threading.Tasks;
+using UdemyNLayerProject.Core.UnitOfWorks;
 using UdemyNLayerProject.Core.Repositories;
 using UdemyNLayerProject.Core.Services;
-using UdemyNLayerProject.Data.UnitOfWorks;
+
 
 namespace UdemyNLayerProject.Service.Services
 {
     public class Service<TEntity> : IService<TEntity> where TEntity : class
     {
-        public readonly UnitOfWork UnitOfWork;
-
+        public readonly IUnitOfWork _unitOfWork;
         private readonly IRepository<TEntity> _repository;
 
-        public Service(IRepository<TEntity> repository, UnitOfWork unitOfWork)
+        public Service(IUnitOfWork unitOfWork, IRepository<TEntity> repository)
         {
+            _unitOfWork = unitOfWork;
             _repository = repository;
-            UnitOfWork = unitOfWork;
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
-            return await _repository.GetByIdAsync(id);
+            await _repository.AddAsync(entity);
+
+            await _unitOfWork.CommitAsync();
+
+            return entity;
+        }
+
+        public async Task<IEnumerable<TEntity>> AddRangeAsync(IEnumerable<TEntity> entities)
+        {
+            await _repository.AddRangeAsync(entities);
+
+            await _unitOfWork.CommitAsync();
+
+            return entities;
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -31,9 +44,22 @@ namespace UdemyNLayerProject.Service.Services
             return await _repository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            return await _repository.Where(predicate);
+            return await _repository.GetByIdAsync(id);
+        }
+
+        public void Remove(TEntity entity)
+        {
+            _repository.Remove(entity);
+
+            _unitOfWork.Commit();
+        }
+
+        public void RemoveRange(IEnumerable<TEntity> entities)
+        {
+            _repository.RemoveRange(entities);
+            _unitOfWork.Commit();
         }
 
         public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
@@ -41,38 +67,18 @@ namespace UdemyNLayerProject.Service.Services
             return await _repository.SingleOrDefaultAsync(predicate);
         }
 
-        public async Task<TEntity> AddAsync(TEntity entity)
-        {
-            await _repository.AddAsync(entity);
-            await UnitOfWork.CommitAsync();
-            return entity;
-        }
-
-        public async Task<IEnumerable<TEntity>> AddRangeAsync(IEnumerable<TEntity> entities)
-        {
-            var addRangeAsync = entities as TEntity[] ?? entities.ToArray();
-            await _repository.AddRangeAsync(addRangeAsync);
-            await UnitOfWork.CommitAsync();
-            return addRangeAsync;
-        }
-
-        public void Remove(TEntity entity)
-        {
-            _repository.Remove(entity);
-            UnitOfWork.Commit();
-        }
-
-        public void RemoveRange(IEnumerable<TEntity> entities)
-        {
-            _repository.RemoveRange(entities);
-            UnitOfWork.Commit();
-        }
-
         public TEntity Update(TEntity entity)
         {
-            var updateEntity = _repository.Update(entity);
-            UnitOfWork.Commit();
+            TEntity updateEntity = _repository.Update(entity);
+
+            _unitOfWork.Commit();
+
             return updateEntity;
+        }
+
+        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _repository.Where(predicate);
         }
     }
 }

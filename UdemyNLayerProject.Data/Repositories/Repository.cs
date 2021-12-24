@@ -32,7 +32,7 @@ namespace UdemyNLayerProject.Data.Repositories
         public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
         {
             return await _dbSet.Where(predicate).ToListAsync();
-        } 
+        }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
@@ -62,6 +62,7 @@ namespace UdemyNLayerProject.Data.Repositories
         public TEntity Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
+
             return entity;
         }
     }

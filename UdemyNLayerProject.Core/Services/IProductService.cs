@@ -6,6 +6,7 @@ namespace UdemyNLayerProject.Core.Services
     public interface IProductService : IService<Product>
     {
         Task<Product> GetWithCategoryByIdAsync(int productId);
-        // bool ControlInnerBarcode(Product product); 
+
+        //  bool ControlInnerBarcode(Product product);
     }
 }

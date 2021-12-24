@@ -66,10 +66,6 @@ namespace UdemyNLayerProject.Data.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("InnerBarcode")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -99,67 +95,55 @@ namespace UdemyNLayerProject.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            Description = "Kalemler Description",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
                             Name = "Pilot Kalem",
                             Price = 12.50m,
-                            Stock = 400
+                            Stock = 100
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
-                            Description = "Kalemler Description 2 kurşun kalem",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
                             Name = "Kurşun Kalem",
-                            Price = 4.30m,
-                            Stock = 150
+                            Price = 40.50m,
+                            Stock = 200
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 1,
-                            Description = "Kalemler Description 3 Tükenmez kalem",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
                             Name = "Tükenmez Kalem",
-                            Price = 34.30m,
-                            Stock = 550
+                            Price = 500m,
+                            Stock = 300
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 2,
-                            Description = "Küçük defter Description 1",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
-                            Name = "Küçük boy defter",
-                            Price = 22.50m,
-                            Stock = 410
+                            Name = "Küçük Boy Defter",
+                            Price = 12.50m,
+                            Stock = 100
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 2,
-                            Description = "Orta defter Description 2",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
-                            Name = "Orta boy defter",
-                            Price = 22.50m,
-                            Stock = 420
+                            Name = "Orta Boy Defter",
+                            Price = 12.50m,
+                            Stock = 100
                         },
                         new
                         {
                             Id = 6,
                             CategoryId = 2,
-                            Description = "Büyük defter Description 2",
-                            InnerBarcode = "12312",
                             IsDeleted = false,
-                            Name = "Büyük boy defter",
-                            Price = 22.50m,
-                            Stock = 120
+                            Name = "Büyük Boy Defter",
+                            Price = 12.50m,
+                            Stock = 100
                         });
                 });
 
