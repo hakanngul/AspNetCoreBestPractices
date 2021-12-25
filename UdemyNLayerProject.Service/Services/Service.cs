@@ -76,6 +76,13 @@ namespace UdemyNLayerProject.Service.Services
             return updateEntity;
         }
 
+        public async Task<TEntity> UpdateAsync(TEntity entity)
+        {
+            TEntity updateEntity = await _repository.UpdateAsync(entity);
+            await _unitOfWork.CommitAsync();
+            return updateEntity;
+        }
+
         public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
         {
             return await _repository.Where(predicate);

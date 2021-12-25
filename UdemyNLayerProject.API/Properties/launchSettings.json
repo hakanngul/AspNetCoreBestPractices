@@ -21,10 +21,16 @@
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "swagger",      
       "applicationUrl": "https://localhost:5001;http://localhost:5005",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "Watch": {
+        "commandName": "Executable",
+        "executablePath": "dotnet.exe",
+        "workingDirectory": "$(ProjectDir)",
+        "commandLineArgs": "watch run"
       }
     }
   }

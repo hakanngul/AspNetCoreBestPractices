@@ -25,5 +25,7 @@ namespace UdemyNLayerProject.Core.Repositories
         void RemoveRange(IEnumerable<TEntity> entities);
 
         TEntity Update(TEntity entity);
+
+        Task<TEntity> UpdateAsync(TEntity entity);
     }
 }

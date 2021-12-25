@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using UdemyNLayerProject.Core.Models;
 
 namespace UdemyNLayerProject.Core.Services
 {
@@ -25,5 +26,7 @@ namespace UdemyNLayerProject.Core.Services
         void RemoveRange(IEnumerable<TEntity> entities);
 
         TEntity Update(TEntity entity);
+        
+        Task<TEntity> UpdateAsync(TEntity entity);
     }
 }

@@ -62,8 +62,13 @@ namespace UdemyNLayerProject.Data.Repositories
         public TEntity Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-
             return entity;
+        }
+
+        public async Task<TEntity> UpdateAsync(TEntity entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            return await Task.FromResult(entity);
         }
     }
 }
