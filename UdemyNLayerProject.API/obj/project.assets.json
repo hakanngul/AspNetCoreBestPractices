@@ -7403,8 +7403,6 @@
       "Microsoft.OpenApi >= 1.2.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "Swashbuckle.AspNetCore >= 5.6.3",
-      "UdemyNLayerProject.Core >= 1.0.0",
-      "UdemyNLayerProject.Data >= 1.0.0",
       "UdemyNLayerProject.Service >= 1.0.0"
     ]
   },
@@ -7415,11 +7413,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
+      "projectUniqueName": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
       "projectName": "UdemyNLayerProject.API",
-      "projectPath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
+      "projectPath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
       "packagesPath": "C:\\Users\\Hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.API\\obj\\",
+      "outputPath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7439,14 +7437,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj": {
-              "projectPath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Core\\UdemyNLayerProject.Core.csproj"
-            },
-            "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj": {
-              "projectPath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj"
-            },
-            "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {
-              "projectPath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj"
+            "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj": {
+              "projectPath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj"
             }
           }
         }

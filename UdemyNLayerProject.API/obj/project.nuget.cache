@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fFuG5PtNBxyE8eEvZmifMm/u7nZWfXY2k20dbxRBG3I4cmtO99qrBBofjY4pCzWCBjHybxFjhe3ZLB43NL/ftQ==",
+  "dgSpecHash": "ltk/30wieHMfnEGCW6kEyrtUl7nUGFN8nLhuVbHmQwGE5vQppeGNAoEweViSzBqlriYBebEptd7CgnBa3FUxJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
+  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.API\\UdemyNLayerProject.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hakan\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Hakan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

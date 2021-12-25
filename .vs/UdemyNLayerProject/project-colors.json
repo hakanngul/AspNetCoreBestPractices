@@ -25,7 +25,12 @@
       "ProjectGuid": "a7e93001-a849-4cb8-a463-f8557f1b5190",
       "DisplayName": "UdemyNLayerProject.Service",
       "ColorIndex": 3
+    },
+    "013e1ce8-8ec8-4ca3-8160-b751ab82a59e": {
+      "ProjectGuid": "013e1ce8-8ec8-4ca3-8160-b751ab82a59e",
+      "DisplayName": "UdemyNLayerProject.Web",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

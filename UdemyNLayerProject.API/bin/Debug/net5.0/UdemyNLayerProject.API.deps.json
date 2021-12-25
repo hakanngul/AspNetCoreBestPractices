@@ -39,8 +39,6 @@
           "Microsoft.OpenApi": "1.2.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Swashbuckle.AspNetCore": "5.6.3",
-          "UdemyNLayerProject.Core": "1.0.0",
-          "UdemyNLayerProject.Data": "1.0.0",
           "UdemyNLayerProject.Service": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProductDto>
+
+@{
+    ViewBag.Title = "Ürünler";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+<a class="btn btn-primary mb-1" asp-action="Create">Ürün Ekle</a>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>İşlemler</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@product.CategoryId</td>
+            <td style="width: 160px">
+                <a class="btn btn-outline-primary" asp-action="Update" asp-controller="Categories" asp-route-id="@product.Id">Güncelle</a>
+                <a class="btn btn-outline-danger"
+                   OnClientClick="javascript:return confirm('Güncellemek istediğinize emin misiniz?')"
+                   asp-action="Delete" asp-controller="Categories" asp-route-id="@product.Id">
+                    Sil
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

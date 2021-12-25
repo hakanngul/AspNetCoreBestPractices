@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "beGk2WLjLk7Ep8osp0FePF5mPH43HmkcsycWFmcTQ86kcs+G6TTirs3rVSwDr2FmgJwfuDS3ZeFhM/+zQ8BWDw==",
+  "dgSpecHash": "aEl8rqYrI8miv/sluNHvzIuIWJB2Ik3rK4DSv/fnUo+UqqQn92IEbDnLYIunI+3Q11ycSeiKFdQigpdo9L4V0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
+  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.Service\\UdemyNLayerProject.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hakan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Hakan\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

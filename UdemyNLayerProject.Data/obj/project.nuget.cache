@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bzM/GccOVQRYt0grP9+0ZYjDWuegKgmpMR3kIIPlVu2yIMpm6Fu+415rWEKhOfX0wxvKPkDzlbDN5rFDETekEg==",
+  "dgSpecHash": "hYaZ4y9bs+ujELo0kkwpKlSbmN5LTkEWabO1GrSfO6v84454xfqbd3MR4bZ3jJxzGc33GCD1pkFypVzKgKGCTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\UdemyNLayerProject\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
+  "projectFilePath": "C:\\Users\\Hakan\\RiderProjects\\AspNetCoreBestPractices\\UdemyNLayerProject.Data\\UdemyNLayerProject.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hakan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Hakan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

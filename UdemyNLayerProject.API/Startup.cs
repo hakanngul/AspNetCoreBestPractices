@@ -1,16 +1,12 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Newtonsoft.Json;
-using UdemyNLayerProject.API.DTOs;
 using UdemyNLayerProject.API.Extensions;
 using UdemyNLayerProject.API.Filters;
 using UdemyNLayerProject.Core.Repositories;
@@ -51,7 +47,6 @@ namespace UdemyNLayerProject.API
                 });
             });
             //request esnasında IUnitOfWork karşılaşırsa UnitOfWork den nesne alacak 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddControllers(options =>
             {
@@ -59,7 +54,7 @@ namespace UdemyNLayerProject.API
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "UdemyNLayerProject.API", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UdemyNLayerProject.API", Version = "v1" });
             });
 
             services.Configure<ApiBehaviorOptions>(options =>
@@ -78,7 +73,7 @@ namespace UdemyNLayerProject.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UdemyNLayerProject.API v1"));
             }
 
-            // app.UseCustomException();
+            app.UseCustomException();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();

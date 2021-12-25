@@ -15,7 +15,7 @@ namespace UdemyNLayerProject.Service.Services
 
         public async Task<Category> GetWithProductsByIdAsync(int categoryId)
         {
-            return await _unitOfWork.Categories.GetWithProductsByIdAsync(categoryId);
+            return await UnitOfWork.Categories.GetWithProductsByIdAsync(categoryId);
         }
     }
 }
