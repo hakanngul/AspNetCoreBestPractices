@@ -6,7 +6,7 @@
 }
 
 <h2>@ViewBag.Title</h2>
-<a class="btn btn-primary mb-1" asp-action="Create">Ürün Ekle</a>
+<a class="btn btn-primary mb-1" asp-controller="Products" asp-action="Create">Ürün Ekle</a>
 <table class="table table-bordered">
     <thead>
     <tr>
@@ -26,13 +26,12 @@
             <td>@product.Price</td>
             <td>@product.CategoryId</td>
             <td style="width: 160px">
-                <a class="btn btn-outline-primary" asp-action="Update" asp-controller="Categories" asp-route-id="@product.Id">Güncelle</a>
-                <a class="btn btn-outline-danger"
-                   OnClientClick="javascript:return confirm('Güncellemek istediğinize emin misiniz?')"
-                   asp-action="Delete" asp-controller="Categories" asp-route-id="@product.Id">
-                    Sil
-                </a>
-            </td>
+                <a class="btn btn-outline-primary" asp-action="Update" asp-controller="Products" 
+                   asp-route-id="@product.Id">Güncelle</a>
+                            <a class="btn btn-outline-danger" 
+                               OnClientClick="javascript:return confirm('Güncellemek istediğinize emin misiniz?')"
+                               asp-action="Delete" asp-controller="Products" asp-route-id="@product.Id">Sil</a>
+                        </td>
         </tr>
     }
     </tbody>

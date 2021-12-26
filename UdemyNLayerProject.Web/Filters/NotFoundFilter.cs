@@ -2,26 +2,24 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using UdemyNLayerProject.Core.Services;
+using UdemyNLayerProject.Web.ApiService;
 using UdemyNLayerProject.Web.DTOs;
 
 namespace UdemyNLayerProject.Web.Filters
 {
     public class NotFoundFilter : ActionFilterAttribute
     {
-        private readonly ICategoryService _categoryService;
+        private CategoryApiService CategoryApiService { get; }
 
-        public NotFoundFilter(ICategoryService categoryService)
+        public NotFoundFilter(CategoryApiService categoryApiService)
         {
-            _categoryService = categoryService;
+            CategoryApiService = categoryApiService;
         }
 
         public async override Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            int id = (int)context.ActionArguments.Values.FirstOrDefault();
-
-            var category = await _categoryService.GetByIdAsync(id);
-
+            int id = (int) context.ActionArguments.Values.FirstOrDefault();
+            var category = await CategoryApiService.GetByIdAsync(id);
             if (category != null)
             {
                 await next();
@@ -31,7 +29,6 @@ namespace UdemyNLayerProject.Web.Filters
                 ErrorDto errorDto = new ErrorDto();
                 errorDto.Status = 404;
                 errorDto.Errors.Add($"id'si {id} olan kategori veritabanında bulunamadı");
-
                 context.Result = new RedirectToActionResult("Error", "Home", errorDto);
             }
         }

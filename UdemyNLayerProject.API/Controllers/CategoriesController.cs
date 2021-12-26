@@ -28,7 +28,6 @@ namespace UdemyNLayerProject.API.Controllers
 
         {
             var categories = await CategoryService.GetAllAsync();
-
             return Ok(Mapper.Map<IEnumerable<CategoryDto>>(categories));
         }
 

@@ -30,7 +30,6 @@ namespace UdemyNLayerProject.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             var products = await ProductService.GetAllAsync();
-
             return Ok(Mapper.Map<IEnumerable<ProductDto>>(products));
         }
 
