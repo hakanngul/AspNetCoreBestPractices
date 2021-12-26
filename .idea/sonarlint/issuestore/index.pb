@@ -247,8 +247,6 @@ d
 0UdemyNLayerProject.Web/Views/_ViewImports.cshtml,7\b\7bacfd5da8b4677fe0f52946d3e9b16898d49678
 _
 /UdemyNLayerProject.Web/Models/ErrorViewModel.cs,f\0\f0f0ebf86d2d04ccf96eceaedcd48a8f16063f67
-j
-:UdemyNLayerProject.Web/Controllers/CategoriesController.cs,8\b\8b563d8b60f5cb2febf727fc1c890ec21b31d3d7
 h
 8UdemyNLayerProject.Web/Controllers/ProductsController.cs,a\7\a74a183a7377f104dac8cb9a4730480a06aa3b48
 b
